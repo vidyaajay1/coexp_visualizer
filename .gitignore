@@ -1,0 +1,7 @@
+# Ignore large files or local artifacts
+*.Rhistory
+*.RData
+*.Rproj.user/
+rsconnect/
+data/*.rds
+!data/*_slim.rds
