@@ -10,9 +10,9 @@ Built using Seurat and ggplot2, the app lets users select a dataset, choose any 
 - Zoomable plots for focused exploration
 
 ## Data
-The dataset used here is from Peng et al. 2024 Organogenetic transcriptomes of the Drosophila embryo at single cell resolution.
-The data is subsetted to focus on just the salivary gland due to size limitations in hosting directly on Shiny.
-You can find the original scRNAseq data here: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE234602
+The dataset used here is from Peng et al. 2024 Organogenetic transcriptomes of the Drosophila embryo at single cell resolution.\
+The data is subsetted to focus on just the salivary gland due to size limitations in hosting directly on Shiny.\
+You can find the original scRNAseq data here: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE234602\
 And the code that was used to analyse and process the data is hosted here: https://github.com/CahanLab/fruitfly_organogenesis
 
 
