@@ -1,0 +1,46 @@
+library(Seurat)
+library(dplyr)
+library(ggplot2)
+rib_late <- readRDS("old_rib_late.rds")
+wt_late <- readRDS("GSE234602_stage13_16_seurat_object.rds")
+rib_early <- readRDS("old_rib_early.rds")
+wt_early <- readRDS("GSE234602_stage10_12_seurat_object.rds")
+head(rib_early$mitochondrial_transcript_total_expression)
+head(wt_early$mitochondrial_transcript_norm_expression)
+
+
+
+VlnPlot(wt_early, features = "mitochondrial_transcript_norm_expression", group.by = "manual_celltypes", pt.size = 0) +
+  ggtitle("wt (10-12): Mitochondrial Transcript Normalized Expression")+
+  geom_boxplot(width = 0.1, outlier.shape = NA, fill = "white", color = "black") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+        plot.margin = margin(10, 10, 50, 50),
+        legend.position = "none") 
+
+VlnPlot(rib_early, features = "mitochondrial_transcript_norm_expression", group.by = "Integrated_tentativeCellType", pt.size = 0) +
+  ggtitle("rib (10-12): Mitochondrial Transcript Normalized Expression")+
+  geom_boxplot(width = 0.1, outlier.shape = NA, fill = "white", color = "black") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+        plot.margin = margin(10, 10, 50, 50),
+        legend.position = "none") 
+
+VlnPlot(rib_late, features = "mitochondrial_transcript_norm_expression", group.by = "Integrated_tentativeCellType", pt.size = 0) +
+  ggtitle("rib (13-16): Mitochondrial Transcript Normalized Expression")+
+  geom_boxplot(width = 0.1, outlier.shape = NA, fill = "white", color = "black") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+        plot.margin = margin(10, 10, 50, 50),
+        legend.position = "none") 
+
+VlnPlot(wt_late, features = "mitochondrial_transcript_norm_expression", group.by = "manual_celltypes", pt.size = 0) +
+  ggtitle("wt (13-16): Mitochondrial Transcript Normalized Expression")+
+  geom_boxplot(width = 0.1, outlier.shape = NA, fill = "white", color = "black") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+        plot.margin = margin(10, 10, 50, 50),
+        legend.position = "none") 
+
+
+ 
